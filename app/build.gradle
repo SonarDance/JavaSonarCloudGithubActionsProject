@@ -1,0 +1,15 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+application {
+    mainClass = 'javasonarcloudgithubactionsproject.App'
+}
+
+task sampleTask(){
+    println(System.getenv("GITHUB_TOKEN"))
+}
