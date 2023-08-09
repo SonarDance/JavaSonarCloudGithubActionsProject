@@ -1,5 +1,6 @@
 plugins {
     id 'application'
+    id "org.sonarqube" version "4.2.1.3168"
 }
 
 repositories {
@@ -8,6 +9,14 @@ repositories {
 
 application {
     mainClass = 'javasonarcloudgithubactionsproject.App'
+}
+
+sonar {
+  properties {
+    property "sonar.projectKey", "SonarDance_JavaSonarCloudGithubActionsProject"
+    property "sonar.organization", "sonardance"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
 }
 
 task sampleTask(){
